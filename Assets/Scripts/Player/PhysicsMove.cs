@@ -13,13 +13,16 @@ namespace Player
             base(objectRigidbody, mobRotation, speed)
         {
             this._moveTick = moveTick;
+            CanMove = true;
         }
 
         public override void SetVelocity(float forwardVelocity, float rightVelocity)
         {
+            if (!CanMove) return;
             ObjectRigidbody.AddForce(
                 (rightVelocity * MobRotation.RightPoint + forwardVelocity * MobRotation.ForwardPoint) * Speed,
                 ForceMode.Impulse);
+            CountTick();
         }
         public override void SetVelocity(Vector2 velocity)
         {
@@ -28,7 +31,7 @@ namespace Player
 
         private async Task CountTick()
         {
-            CanMove = true;
+            CanMove = false;
             await Task.Delay((int)(_moveTick * 1000));
             CanMove = true;
         }

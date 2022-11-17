@@ -19,7 +19,7 @@ namespace Player
         {
             _velocityChange = assForceTransform.InverseTransformPoint(_transform.position);
             _transform.localScale = new Vector3(1, 1+_velocityChange.y*multipliers.y, 1);
-            _transform.localEulerAngles =
+            _transform.eulerAngles =
                 new Vector3(-_velocityChange.z * multipliers.x, 0, _velocityChange.x * multipliers.z);
         }
     }

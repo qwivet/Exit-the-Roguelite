@@ -11,7 +11,7 @@
                     "id": "4871a8b8-cb93-45a7-8e9d-be1246ebd374",
                     "expectedControlType": "Vector2",
                     "processors": "NormalizeVector2",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": true
                 },
                 {
@@ -21,6 +21,15 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MeleeAttack",
+                    "type": "Button",
+                    "id": "d2b459db-1603-4030-96b9-b2ec17382514",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
                     "initialStateCheck": false
                 }
             ],
@@ -88,6 +97,28 @@
                     "processors": "",
                     "groups": "StandartPC",
                     "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "443af209-70ed-4c73-97cd-45a0873256ee",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ab6b5ea9-5678-401d-8437-7372a2bb3f44",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "StandartPC",
+                    "action": "MeleeAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
